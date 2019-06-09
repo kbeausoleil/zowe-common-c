@@ -1562,7 +1562,7 @@ void respondWithDatasetMetadata(HttpResponse *response) {
 #endif /* __ZOWE_OS_ZOS */
 }
 
-void respondWithDatasetCatalogInfo(HttpResponse *response) {
+void respondWithDatasetCatalogInfo(HttpResponse *response, char *absolutePath) {
 #ifdef __ZOWE_OS_ZOS
   HttpRequest *request = response->request;
 
