@@ -1558,7 +1558,16 @@ void respondWithDatasetMetadata(HttpResponse *response) {
   finishResponse(response);
   safeFree((char*)returnParms,sizeof(csi_parmblock));
   safeFree((char*)(entrySet->entries),sizeof(EntryData*)*entrySet->length);
-  safeFree((char*)entrySet,sizeof(EntryDataSet));    
+  safeFree((char*)entrySet,sizeof(EntryDataSet));
+#endif /* __ZOWE_OS_ZOS */
+}
+
+void respondWithDatasetCatalogInfo(HttpResponse *response) {
+#ifdef __ZOWE_OS_ZOS
+  HttpRequest *request = response->request;
+
+  // TODO: write me!
+
 #endif /* __ZOWE_OS_ZOS */
 }
 
