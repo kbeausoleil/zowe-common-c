@@ -61,6 +61,7 @@ void addMemberedDatasetMetadata(char *datasetName, int nameLength,
 void respondWithDataset(HttpResponse* response, char* absolutePath, int jsonMode);
 void respondWithVSAMDataset(HttpResponse* response, char* absolutePath, hashtable *acbTable, int jsonMode);
 void respondWithDatasetMetadata(HttpResponse *response);
+void respondWithDatasetCatalogInfo(HttpResponse *response, char *absolutePath);
 void respondWithHLQNames(HttpResponse *response, MetadataQueryCache *metadataQueryCache);
 void updateDataset(HttpResponse* response, char* absolutePath, int jsonMode);
 void updateVSAMDataset(HttpResponse* response, char* absolutePath, hashtable *acbTable, int jsonMode);
